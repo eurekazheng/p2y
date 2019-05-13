@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^eurekazheng.tech$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.eurekazheng.tech$
+RewriteCond %{REQUEST_URI} !gakki/public/
+RewriteRule (.*) /gakki/public/$1 [L]
